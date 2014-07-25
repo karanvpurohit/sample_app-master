@@ -18,11 +18,12 @@ namespace :metrics_and_tests do
 		puts "Metrics done"
 		# 'echo metric_fu --out /home/karan/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS'
 		puts "invoking tests"
-		Rake::Task["db:migrate RAILS_ENV=test"].execute
-		'echo rspec'
-		 # Rake::Task["db:test:load"].execute
+		# Rake::Task["db:migrate RAILS_ENV=test"].execute
+		
+		 Rake::Task["db:test:load"].execute
 		 # puts "db:test:load done"
-		 # Rake::Task["db:migrate"].execute
+		 Rake::Task["db:migrate"].execute
+		 'echo rspec'
 		 # puts "db:migrate done"
 		 # Rake::Task["default"].execute
 		 # puts "default done"
