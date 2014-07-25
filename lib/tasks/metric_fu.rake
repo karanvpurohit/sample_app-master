@@ -20,7 +20,7 @@ namespace :metrics_and_tests do
 		puts "invoking tests"
 		 Rake::Task["db:test:load"].execute
 		 Rake::Task["db:migrate"].execute
-		 Rake::Task["db:default"].execute
+		 Rake::Task["default"].execute
 		 puts "testing done"
 		 # Rake::Task["cucumber"].execute
 	end
