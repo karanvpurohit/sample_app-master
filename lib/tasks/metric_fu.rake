@@ -15,9 +15,13 @@ namespace :metrics_and_tests do
 	task :all do
 		puts "invoking metric_fu"
 		Rake::Task["metrics:all"].execute
+		puts "Metrics done"
 		# 'echo metric_fu --out /home/karan/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS'
-		puts "invoking test"
-		 Rake::Task["test"].execute
+		puts "invoking tests"
+		 Rake::Task["db:test:load"].execute
+		 Rake::Task["db:migrate"].execute
+		 Rake::Task["db:default"].execute
+		 puts "testing done"
 		 # Rake::Task["cucumber"].execute
 	end
 end
