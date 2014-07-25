@@ -24,6 +24,7 @@ namespace :metrics_and_tests do
 		 # puts "db:test:load done"
 		 Rake::Task["db:migrate"].execute
 		 'echo rspec'
+		 puts "echoed rspec"
 		 # puts "db:migrate done"
 		 # Rake::Task["default"].execute
 		 # puts "default done"
