@@ -14,7 +14,7 @@ end# namespace :metrics do
 namespace :metrics_and_tests do
 	task :all do
 		puts "invoking metric_fu"
-		Rake::execute["metrics:all"].invoke
+		Rake::Task["metrics:all"].execute
 		# 'echo metric_fu --out /home/karan/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS'
 		puts "invoking test"
 		 'echo rspec'
