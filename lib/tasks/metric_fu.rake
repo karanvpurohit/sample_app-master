@@ -17,8 +17,8 @@ namespace :metrics_and_tests do
 		Rake::Task["metrics:all"].execute
 		# 'echo metric_fu --out /home/karan/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS'
 		puts "invoking test"
-		 Rake::Task["rspec"].execute
-		 Rake::Task["cucumber"].execute
+		 Rake::Task["test"].execute
+		 # Rake::Task["cucumber"].execute
 	end
 end
 
