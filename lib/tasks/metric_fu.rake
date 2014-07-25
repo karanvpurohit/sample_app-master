@@ -19,8 +19,11 @@ namespace :metrics_and_tests do
 		# 'echo metric_fu --out /home/karan/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS'
 		puts "invoking tests"
 		 Rake::Task["db:test:load"].execute
+		 puts "db:test:load done"
 		 Rake::Task["db:migrate"].execute
+		 puts "db:migrate done"
 		 Rake::Task["default"].execute
+		 puts "default done"
 		 puts "testing done"
 		 # Rake::Task["cucumber"].execute
 	end
