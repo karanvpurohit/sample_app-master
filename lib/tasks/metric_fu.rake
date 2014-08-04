@@ -12,7 +12,7 @@ end# namespace :metrics do
 # end
 
 namespace :metrics_and_tests do
-	task :alb do
+	task :all do
 		puts "invoking metric_fu"
 		Rake::Task["metrics:all"].execute
 		puts "Metrics done"
