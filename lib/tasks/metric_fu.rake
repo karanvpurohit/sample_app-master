@@ -12,8 +12,8 @@ end# namespace :metrics do
 # end
 
 namespace :metrics_and_tests do
-	task :alla do
-		puts "invoking metric_fu"
+	task :all do
+		puts "invoking metric_fu Results will be stored in Build Artifacts/output tab"
 		Rake::Task["metrics:all"].execute
 		puts "Metrics done"
 		# 'echo metric_fu --out /home/karan/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS'
@@ -24,7 +24,7 @@ namespace :metrics_and_tests do
 		 # puts "db:test:load done"
 		 Rake::Task["db:migrate"].execute
 		 sh 'rspec'
-		 puts "echoed rspec"
+		 sh 'cucumber'
 		 # puts "db:migrate done"
 		 # Rake::Task["default"].execute
 		 # puts "default done"
