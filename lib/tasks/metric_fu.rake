@@ -32,7 +32,7 @@ namespace :metrics_and_tests do
 		 # Rake::Task["cucumber"].execute
 	end
 end
-task :email_list :environment do
+task :email_list do
 	return ['karan.purohit@clariontechnologies.co.in', 'karanvpurohit@gmail.com']
 end
 # task :metrics_and_tests => [:'metrics:all --out $HOME/.cruise/projects/sample_app/CC_BUILD_ARTIFACTS/', test]
